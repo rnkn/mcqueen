@@ -1,5 +1,29 @@
 @import "config";
 
+$page-size: letter !default;
+$font-size: 12pt !default;
+$font-stack: "Courier Primer", "Courier", "Courier Final Draft", "Courier New" !default;
+$line-height: 1 !default;
+$text-body-width: 6in !default;
+
+$title-upcase: true !default;
+$title-underline: true !default;
+$title-bold: false !default;
+
+$scene-double-space: true !default;
+$scene-bold: false !default;
+$scene-underline: false !default;
+
+$action-orphans: 2 !default;
+$action-widows: 2 !default;
+
+$dialog-contd: "(CONT'D)" !default;
+$dialog-more: "(MORE)" !default;
+$dialog-orphans: 2 !default;
+$dialog-widows: 2 !default;
+
+$highlight-change-color: yellow !default;
+
 @page {
     size: $page-size;
     margin-top: 1in;
