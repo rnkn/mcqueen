@@ -231,6 +231,7 @@ table.dialog, table.dual-dialog-left, table.dual-dialog-right {
     }
     td {
         display: block;
+        padding: 0;
         &.character {
             margin-left: 1in;
         }
