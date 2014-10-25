@@ -1,0 +1,220 @@
+@import "config";
+
+@page {
+    size: $page-size;
+    margin-top: 1in;
+    margin-right: 1in;
+    margin-bottom: 0.5in;
+    margin-left: 1.5in;
+}
+
+@page screenplay {
+    @top-right-corner {
+        font-family: $font-stack;
+        font-size: $font-size;
+        content: counter(page)".";
+        vertical-align: bottom;
+        padding-bottom: 1em;
+    }
+    @bottom-left {
+        font-family: $font-stack;
+        font-size: $font-size;
+        content: string(dialog-more, last);
+        margin-left: 2in;
+        vertical-align: top;
+    }
+}
+
+@page screenplay:first {
+    @top-right-corner {
+        content: normal;
+    }
+}
+
+#title-page {
+    page: title;
+    width: $text-body-width;
+    margin: 0 auto;
+    clear: both;
+    page-break-after: always;
+    #title {
+        @media print {
+            margin-top: 3.5in;
+            margin-bottom: 4in;
+        }
+        text-align: center;
+        h1 {
+            @if $title-upcase { text-transform: uppercase; }
+            @if $title-underline { text-decoration: underline; }
+            @if $title-bold { font-weight: bold; }
+        }
+    }
+    #left {
+        width: 3in;
+        float: left;
+    }
+    #right {
+        width: 3in;
+        float: right;
+        text-align: right;
+    }
+}
+
+#screenplay {
+    page: screenplay;
+    width: $text-body-width;
+    margin: 0in auto;
+    clear: both;
+    counter-reset: page 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: $font-size;
+}
+
+body {
+    font-family: $font-stack;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+hr {
+    visibility: hidden;
+    page-break-after: always;
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
+mark {
+    background-color: $highlight-change-color;
+    &:before {
+        content: '*';
+        width: 0.5in;
+        position: absolute;
+        right: 0in;
+    }
+}
+
+del {
+    &:before {
+        content: '*';
+        width: 0.5in;
+        position: absolute;
+        right: 0in;
+    }
+}
+
+h2.scene-heading {
+    @if $scene-double-space { margin-top: 2em; }
+    @else { margin-top: 1em; }
+    @if $scene-bold { font-weight: bold; }
+    @if $scene-underline { text-decoration: underline; }
+    page-break-after: avoid;
+}
+
+p {
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0in;
+    width: auto;
+    &.action {
+        white-space: pre-wrap;
+        orphans: $action-orphans;
+        widows: $action-widows;
+    }
+    &.center {
+        text-align: center;
+        margin-left: 0;
+        width: 100%;
+        white-space: pre-wrap;
+    }
+    &.trans {
+        margin-left: 4in;
+        width: 2in;
+        page-break-before: avoid;
+    }
+    &.note {
+        display: none;
+    }
+    &.section {
+        display: none;
+    }
+    &.synopsis {
+        display: none;
+    }
+    &.page-break {
+        visibility: hidden;
+        page-break-after: always;
+    }
+}
+
+table.dialog {
+    clear: both;
+    width: 4in;
+    margin-top: 1em;
+    margin-left: 1in;
+    td {
+        &.dialog {
+            width: 3.5in;
+        }
+    }
+}
+
+table.dual-dialog-left {
+    float: left;
+    width: 2.9in;
+}
+
+table.dual-dialog-right {
+    float: right;
+    width: 2.9in;
+}
+
+table.dialog, table.dual-dialog-left, table.dual-dialog-right {
+    margin-bottom: 1em;
+    border-spacing: 0px;
+    string-set: character attr(character) dialog-more "#{$dialog-more}";
+    &.dialog:after {
+        display: table-row;
+        content: "";
+        string-set: dialog-more "";
+    }
+    caption.character {
+        margin-left: 1in;
+        text-align: left;
+        caption-side: top;
+        caption-page: following;
+        content: string(character, last)" #{$dialog-contd}";
+    }
+    tr {
+        &.character {
+            page-break-after: avoid;
+        }
+        &.dialog {
+            orphans: $dialog-orphans;
+            widows: $dialog-widows;
+        }
+        &.paren {
+            orphans: $dialog-orphans;
+            widows: $dialog-widows;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+        }
+    }
+    td {
+        display: block;
+        &.character {
+            margin-left: 1in;
+        }
+        &.paren {
+            margin-left: 0.6in;
+            text-indent: -0.6em;
+            width: 2in;
+        }
+    }
+}
+
