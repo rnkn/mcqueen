@@ -16,7 +16,7 @@ Variables
 ---------
 
 | Variable                | Default                                           | Type/Value            |
-|-------------------------+---------------------------------------------------+-----------------------|
+|-------------------------|---------------------------------------------------|-----------------------|
 | $page-size              | letter                                            | letter, us-letter, a4 |
 | $font-size              | 12pt                                              | size                  |
 | $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | font stack            |
@@ -35,3 +35,5 @@ Variables
 | $dialog-orphans         | 2                                                 | integer               |
 | $dialog-widows          | 2                                                 | integer               |
 | $highlight-change-color | yellow                                            | color                 |
+
+CSS derived from Textplay (c) Oliver Taylor <https://github.com/olivertaylor/Textplay>
