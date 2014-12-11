@@ -224,8 +224,6 @@ table.dialog, table.dual-dialog-left, table.dual-dialog-right {
             widows: $dialog-widows;
         }
         &.paren {
-            orphans: $dialog-orphans;
-            widows: $dialog-widows;
             page-break-inside: avoid;
             page-break-after: avoid;
         }
