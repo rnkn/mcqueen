@@ -136,6 +136,7 @@ h2.scene-heading {
     @else { margin-top: 1em; }
     @if $scene-bold { font-weight: bold; }
     @if $scene-underline { text-decoration: underline; }
+    margin-bottom: 1em;
     page-break-after: avoid;
 }
 
