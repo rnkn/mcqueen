@@ -15,23 +15,23 @@ configuration can be achieved by outputting key-value variables to
 Variables
 ---------
 
-| Variable                | Default                                           | Values      |
-|-------------------------|---------------------------------------------------|-------------|
-| $page-size              | letter                                            | letter, a4  |
-| $font-size              | 12pt                                              |             |
-| $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" |             |
-| $line-height            | 1                                                 |             |
-| $text-body-width        | 6in                                               |             |
-| $title-upcase           | true                                              | true, false |
-| $title-underline        | true                                              | true, false |
-| $title-bold             | false                                             | true, false |
-| $scene-double-space     | false                                             | true, false |
-| $scene-bold             | false                                             | true, false |
-| $scene-underline        | false                                             | true, false |
-| $dialog-contd           | "(CONT'D)"                                        |             |
-| $dialog-more            | "(MORE)"                                          |             |
-| $action-orphans         | 2                                                 |             |
-| $action-widows          | 2                                                 |             |
-| $dialog-orphans         | 2                                                 |             |
-| $dialog-widows          | 2                                                 |             |
-| $highlight-change-color | yellow                                            |             |
+| Variable                | Default                                           | Type/Value            |
+|-------------------------+---------------------------------------------------+-----------------------|
+| $page-size              | letter                                            | letter, us-letter, a4 |
+| $font-size              | 12pt                                              | size                  |
+| $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | font stack            |
+| $line-height            | 1                                                 | integer               |
+| $text-body-width        | 6in                                               | size                  |
+| $title-upcase           | true                                              | boolean               |
+| $title-underline        | true                                              | boolean               |
+| $title-bold             | false                                             | boolean               |
+| $scene-double-space     | false                                             | boolean               |
+| $scene-bold             | false                                             | boolean               |
+| $scene-underline        | false                                             | boolean               |
+| $dialog-contd           | "(CONT'D)"                                        | string                |
+| $dialog-more            | "(MORE)"                                          | string                |
+| $action-orphans         | 2                                                 | integer               |
+| $action-widows          | 2                                                 | integer               |
+| $dialog-orphans         | 2                                                 | integer               |
+| $dialog-widows          | 2                                                 | integer               |
+| $highlight-change-color | yellow                                            | color                 |
