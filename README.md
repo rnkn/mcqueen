@@ -35,3 +35,5 @@ Variables
 | $dialog-orphans         | 2                                                 |             |
 | $dialog-widows          | 2                                                 |             |
 | $highlight-change-color | yellow                                            |             |
+
+CSS derived from Textplay (c) Oliver Taylor <https://github.com/olivertaylor/Textplay>
