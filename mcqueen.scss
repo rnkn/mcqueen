@@ -38,13 +38,6 @@ $highlight-change-color: yellow !default;
         vertical-align: bottom;
         padding-bottom: 1em;
     }
-    @bottom-left {
-        font-family: $font-stack;
-        font-size: $font-size;
-        content: string(dialog-more, last);
-        margin-left: 2in;
-        vertical-align: top;
-    }
 }
 
 @page screenplay:first {
@@ -160,19 +153,13 @@ p {
         width: 2in;
         page-break-before: avoid;
     }
-    &.note {
-        display: none;
-    }
-    &.section {
-        display: none;
-    }
-    &.synopsis {
-        display: none;
-    }
     &.page-break {
         visibility: hidden;
         page-break-after: always;
     }
+    &.note { display: none; }
+    &.section { display: none; }
+    &.synopsis { display: none; }
 }
 
 table.dialog {
@@ -190,18 +177,26 @@ table.dialog {
 table.dialog, table.dual-dialog-left, table.dual-dialog-right {
     margin-bottom: 1em;
     border-spacing: 0px;
-    string-set: character attr(character) dialog-more "#{$dialog-more}";
-    &.dialog:after {
-        display: table-row;
-        content: "";
-        string-set: dialog-more "";
-    }
-    caption.character {
+    caption {
         margin-left: 1in;
         text-align: left;
+        caption-page: first;
         caption-side: top;
-        caption-page: following;
-        content: string(character, last)" #{$dialog-contd}";
+        @media screen {
+            &.continued { display: none; }
+            &.more { display: none; }
+        }
+        @media print {
+            &.continued {
+                caption-page: following;
+                caption-side: top;
+            }
+            &.more {
+                display: none;
+                caption-page: continued;
+                caption-side: bottom;
+            }
+        }
     }
     tr {
         &.character {
