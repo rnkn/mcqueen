@@ -77,10 +77,10 @@ $highlight-change-color: yellow !default;
 
 #screenplay {
     page: screenplay;
+    counter-reset: page 1;
+    prince-page-group: start;
     width: $text-body-width;
     margin: 0in auto;
-    clear: both;
-    counter-reset: page 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
