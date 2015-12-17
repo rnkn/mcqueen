@@ -187,16 +187,6 @@ table.dialog {
     }
 }
 
-table.dual-dialog-left {
-    float: left;
-    width: 2.9in;
-}
-
-table.dual-dialog-right {
-    float: right;
-    width: 2.9in;
-}
-
 table.dialog, table.dual-dialog-left, table.dual-dialog-right {
     margin-bottom: 1em;
     border-spacing: 0px;
@@ -240,3 +230,22 @@ table.dialog, table.dual-dialog-left, table.dual-dialog-right {
     }
 }
 
+table.dual-dialog-left {
+    float: left;
+    width: 3in;
+    td {
+        &.dialog {
+            width: 2.9in;
+        }
+    }
+}
+
+table.dual-dialog-right {
+    float: right;
+    width: 3in;
+    td {
+        &.dialog {
+            width: 2.9in;
+        }
+    }
+}
