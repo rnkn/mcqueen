@@ -19,9 +19,9 @@ Variables
 |-------------------------|---------------------------------------------------|-----------------------|
 | $page-size              | letter                                            | letter, us-letter, a4 |
 | $font-size              | 12pt                                              | size                  |
-| $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | font stack            |
+| $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | array                 |
 | $line-height            | 1                                                 | integer               |
-| $text-body-width        | 6in                                               | size                  |
+| $text-body-width        | 6in                                               | length                |
 | $title-upcase           | true                                              | boolean               |
 | $title-underline        | true                                              | boolean               |
 | $title-bold             | false                                             | boolean               |
