@@ -6,7 +6,7 @@
   margin-left: 1.5in; }
 @page screenplay {
   @top-right-corner {
-    font-family: "Courier Primer", "Courier", "Courier Final Draft", "Courier New";
+    font-family: "Courier Prime", "Courier", "Courier Final Draft", "Courier New";
     font-size: 12pt;
     content: counter(page) ".";
     vertical-align: bottom;
@@ -17,7 +17,7 @@
 .screenplay {
   page: screenplay;
   counter-reset: page;
-  font-family: "Courier Primer", "Courier", "Courier Final Draft", "Courier New";
+  font-family: "Courier Prime", "Courier", "Courier Final Draft", "Courier New";
   font-size: 12pt;
   line-height: 1;
   width: 6in;
