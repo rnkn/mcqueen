@@ -1,7 +1,7 @@
 McQueen
 =======
 
-*"I live for myself and I answer to nobody."*
+*"I live for myself and I answer to nobody." – Steve McQueen*
 
 McQueen is style for HTML screenplays.
 
@@ -11,6 +11,10 @@ Usage
 The main stylesheet `mcqueen.scss` is designed not to be edited. All
 configuration can be achieved by outputting key-value variables to
 `_config.scss`, which is then imported on compile.
+
+The classes are element-agnostic, so you can use `div` or `section` or
+`p`, etc. Screenplay content must be wrapped in a `class="screenplay"`,
+which allows for snippets within other content flow.
 
 Variables
 ---------
@@ -25,6 +29,7 @@ Variables
 | $title-upcase           | true                                              | boolean               |
 | $title-underline        | true                                              | boolean               |
 | $title-bold             | false                                             | boolean               |
+| $title-contact-right    | false                                             | boolean               |
 | $scene-double-space     | false                                             | boolean               |
 | $scene-bold             | false                                             | boolean               |
 | $scene-underline        | false                                             | boolean               |
@@ -35,5 +40,3 @@ Variables
 | $dialog-orphans         | 2                                                 | integer               |
 | $dialog-widows          | 2                                                 | integer               |
 | $highlight-change-color | yellow                                            | color                 |
-
-CSS derived from Textplay (c) Oliver Taylor <https://github.com/olivertaylor/Textplay>
