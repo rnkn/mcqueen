@@ -7,6 +7,8 @@ McQueen is style for HTML screenplays.
 
 Preview the [Nicholl Fellowship sample script](https://rawgit.com/rnkn/mcqueen/master/sample/sample.html).
 
+HTML documents can also include [snippets of screenplay content](https://rawgit.com/rnkn/mcqueen/master/sample/snippet.html).
+
 Usage
 -----
 
