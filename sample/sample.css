@@ -40,8 +40,8 @@
         text-transform: uppercase;
         text-decoration: underline; }
   .screenplay h1, .screenplay h2, .screenplay h3, .screenplay h4, .screenplay h5, .screenplay h6 {
-    font-weight: normal;
-    font-size: 12pt; }
+    font-weight: inherit;
+    font-size: inherit; }
   .screenplay hr {
     page-break-after: always; }
     @media print {
@@ -59,21 +59,23 @@
     width: 0.5in;
     position: absolute;
     right: 0in; }
-  .screenplay .scene-heading {
+  .screenplay .scene {
     margin-top: 2em;
+    width: auto; }
+  .screenplay .scene-heading {
     margin-bottom: 1em;
     page-break-after: avoid; }
   .screenplay .action {
-    width: auto;
     margin: 1em 0in;
     white-space: pre-wrap;
     orphans: 2;
     widows: 2; }
   .screenplay .dialog {
+    display: table;
     width: 4in;
     margin-top: 1em;
-    margin-left: 1.5in;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    margin-left: 1.5in; }
     .screenplay .dialog .character {
       margin-left: 1in; }
     .screenplay .dialog .lines {
@@ -81,7 +83,6 @@
       orphans: 2;
       widows: 2; }
     .screenplay .dialog .paren {
-      display: block;
       width: 2in;
       margin-left: 0.6in;
       text-indent: -0.6em;
@@ -92,6 +93,7 @@
       .screenplay .dialog.dual .lines {
         width: 2.9in; }
       .screenplay .dialog.dual.left {
+        margin-top: 0em;
         margin-left: 0in;
         float: left; }
       .screenplay .dialog.dual.right {
@@ -109,7 +111,7 @@
     text-decoration: underline; }
   .screenplay .note {
     display: none; }
-  .screenplay .section {
+  .screenplay .section-heading {
     display: none; }
   .screenplay .synopsis {
     display: none; }

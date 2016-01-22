@@ -84,8 +84,8 @@ $highlight-change-color: yellow !default;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    font-size: $font-size;
+    font-weight: inherit;
+    font-size: inherit;
   }
 
   hr {
@@ -114,9 +114,13 @@ $highlight-change-color: yellow !default;
     }
   }
 
-  .scene-heading {
+  .scene {
     @if $scene-double-space { margin-top: 2em; }
     @else { margin-top: 1em; }
+    width: auto;
+  }
+  
+  .scene-heading {
     @if $scene-bold { font-weight: bold; }
     @if $scene-underline { text-decoration: underline; }
     margin-bottom: 1em;
@@ -124,7 +128,6 @@ $highlight-change-color: yellow !default;
   }
 
   .action {
-    width: auto;
     margin: 1em 0in;
     white-space: pre-wrap;
     orphans: $action-orphans;
@@ -132,10 +135,11 @@ $highlight-change-color: yellow !default;
   }
 
   .dialog {
+    display: table;
     width: 4in;
     margin-top: 1em;
-    margin-left: 1.5in;
     margin-bottom: 1em;
+    margin-left: 1.5in;
     .character {
       margin-left: 1in;
     }
@@ -145,7 +149,6 @@ $highlight-change-color: yellow !default;
       widows: $dialog-widows;
     }
     .paren {
-      display: block;
       width: 2in;
       margin-left: 0.6in;
       text-indent: -0.6em;
@@ -159,6 +162,7 @@ $highlight-change-color: yellow !default;
         width: 2.9in;
       }
       &.left {
+        margin-top: 0em;
         margin-left: 0in;
         float: left;
       }
@@ -186,6 +190,6 @@ $highlight-change-color: yellow !default;
   }
 
   .note { display: none; }
-  .section { display: none; }
+  .section-heading { display: none; }
   .synopsis { display: none; }
 }
