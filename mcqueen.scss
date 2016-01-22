@@ -1,6 +1,6 @@
 @import "config";
 
-$page-size: 8.5in 11in !default;
+$page-size: letter !default;
 $font-size: 12pt !default;
 $font-stack: "Courier Prime", "Courier", "Courier Final Draft", "Courier New" !default;
 $line-height: 1 !default;
@@ -9,238 +9,183 @@ $text-body-width: 6in !default;
 $title-upcase: true !default;
 $title-underline: true !default;
 $title-bold: false !default;
+$title-contact-right: false !default;
 
-$scene-double-space: true !default;
+$scene-double-space: false !default;
 $scene-bold: false !default;
 $scene-underline: false !default;
 
 $action-orphans: 2 !default;
 $action-widows: 2 !default;
 
+$dialog-contd: "(CONT'D)" !default;
+$dialog-more: "(MORE)" !default;
 $dialog-orphans: 2 !default;
 $dialog-widows: 2 !default;
 
 $highlight-change-color: yellow !default;
 
-@page {
-    size: $page-size;
-    margin-top: 1in;
-    margin-right: 1in;
-    margin-bottom: 0.75in;
-    margin-left: 1.5in;
+@page screenplay, screenplay-title {
+  size: $page-size;
+  margin-top: 1in;
+  margin-right: 1in;
+  margin-bottom: 0.75in;
+  margin-left: 1.5in;
 }
 
 @page screenplay {
-    @top-right-corner {
-        font-family: $font-stack;
-        font-size: $font-size;
-        content: counter(page)".";
-        vertical-align: bottom;
-        padding-bottom: 1em;
-    }
+  @top-right-corner {
+    font-family: $font-stack;
+    font-size: $font-size;
+    content: counter(page)".";
+    vertical-align: bottom;
+    padding-bottom: 1em;
+  }
 }
 
 @page screenplay:first {
-    @top-right-corner {
-        content: normal;
-    }
+  @top-right-corner {
+    content: normal;
+  }
 }
 
-#title-page {
-    page: title;
-    width: $text-body-width;
-    margin: 0 auto;
-    clear: both;
+.screenplay {
+  page: screenplay;
+  counter-reset: page;
+  font-family: $font-stack;
+  font-size: $font-size;
+  line-height: $line-height;
+  width: $text-body-width;
+  margin: 1em auto;
+
+  .title-page {
+    page: screenplay-title;
     page-break-after: always;
-    #title {
-        @media print {
-            margin-top: 3.5in;
-            margin-bottom: 4in;
-        }
-        text-align: center;
-        h1 {
-            @if $title-upcase { text-transform: uppercase; }
-            @if $title-underline { text-decoration: underline; }
-            @if $title-bold { font-weight: bold; }
-        }
-    }
-    #left {
-        width: 3in;
-        float: left;
-    }
-    #right {
-        width: 3in;
-        float: right;
-        text-align: right;
-    }
-}
-
-#screenplay {
-    page: screenplay;
-    counter-reset: page 1;
-    prince-page-group: start;
     width: $text-body-width;
-    margin: 0in auto;
-}
+    margin-top: 0in;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+    .title {
+      @media print {
+        margin-top: 3.5in;
+        margin-bottom: 4in;
+      }
+      text-align: center;
+      h1 {
+        @if $title-upcase { text-transform: uppercase; }
+        @if $title-underline { text-decoration: underline; }
+        @if $title-bold { font-weight: bold; }
+      }
+    }
+    .contact {
+      @if $title-contact-right { text-align: right; }
+    }
+  }
 
-h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-size: $font-size;
-}
+  }
 
-body {
-    font-family: $font-stack;
-    font-size: $font-size;
-    line-height: $line-height;
-}
-
-hr {
-    visibility: hidden;
+  hr {
+    @media print {
+      visibility: hidden;
+    }
     page-break-after: always;
-}
+  }
 
-span.underline {
-    text-decoration: underline;
-}
-
-mark {
+  mark {
     background-color: $highlight-change-color;
     &:before {
-        content: '*';
-        width: 0.5in;
-        position: absolute;
-        right: 0in;
+      content: '*';
+      width: 0.5in;
+      position: absolute;
+      right: 0in;
     }
-}
+  }
 
-del {
+  del {
     &:before {
-        content: '*';
-        width: 0.5in;
-        position: absolute;
-        right: 0in;
+      content: '*';
+      width: 0.5in;
+      position: absolute;
+      right: 0in;
     }
-}
+  }
 
-h2.scene-heading {
+  .scene-heading {
     @if $scene-double-space { margin-top: 2em; }
     @else { margin-top: 1em; }
     @if $scene-bold { font-weight: bold; }
     @if $scene-underline { text-decoration: underline; }
     margin-bottom: 1em;
     page-break-after: avoid;
-}
+  }
 
-p {
-    clear: both;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0in;
+  .action {
     width: auto;
-    &.action {
-        white-space: pre-wrap;
-        orphans: $action-orphans;
-        widows: $action-widows;
-    }
-    &.center {
-        text-align: center;
-        margin-left: 0;
-        width: 100%;
-        white-space: pre-wrap;
-    }
-    &.trans {
-        margin-left: 4in;
-        width: 2in;
-        page-break-before: avoid;
-    }
-    &.page-break {
-        visibility: hidden;
-        page-break-after: always;
-    }
-    &.note { display: none; }
-    &.section { display: none; }
-    &.synopsis { display: none; }
-}
+    margin: 1em 0in;
+    white-space: pre-wrap;
+    orphans: $action-orphans;
+    widows: $action-widows;
+  }
 
-table.dialog {
-    clear: both;
+  .dialog {
     width: 4in;
     margin-top: 1em;
     margin-left: 1.5in;
-    td {
-        &.dialog {
-            width: 3.5in;
-        }
-    }
-}
-
-table.dialog, table.dual-dialog-left, table.dual-dialog-right {
     margin-bottom: 1em;
-    border-spacing: 0px;
-    caption {
-        margin-left: 1in;
-        text-align: left;
-        caption-page: first;
-        caption-side: top;
-        @media screen {
-            &.continued { display: none; }
-            &.more { display: none; }
-        }
-        @media print {
-            &.continued {
-                caption-page: following;
-                caption-side: top;
-            }
-            &.more {
-                display: none;
-                caption-page: continued;
-                caption-side: bottom;
-            }
-        }
+    .character {
+      margin-left: 1in;
     }
-    tr {
-        &.character {
-            page-break-after: avoid;
-        }
-        &.dialog {
-            orphans: $dialog-orphans;
-            widows: $dialog-widows;
-        }
-        &.paren {
-            page-break-inside: avoid;
-            page-break-after: avoid;
-        }
+    .lines {
+      width: 3.5in;
+      orphans: $dialog-orphans;
+      widows: $dialog-widows;
     }
-    td {
-        display: block;
-        padding: 0;
-        &.character {
-            margin-left: 1in;
-        }
-        &.paren {
-            margin-left: 0.6in;
-            text-indent: -0.6em;
-            width: 2in;
-        }
+    .paren {
+      display: block;
+      width: 2in;
+      margin-left: 0.6in;
+      text-indent: -0.6em;
+      page-break-inside: avoid;
+      page-break-after: avoid;
     }
-}
 
-table.dual-dialog-left {
-    float: left;
-    width: 3in;
-    td {
-        &.dialog {
-            width: 2.9in;
-        }
+    &.dual {
+      width: 3in;
+      .lines {
+        width: 2.9in;
+      }
+      &.left {
+        margin-left: 0in;
+        float: left;
+      }
+      &.right {
+        clear: none;
+      }
     }
-}
+  }
 
-table.dual-dialog-right {
-    float: right;
-    width: 3in;
-    td {
-        &.dialog {
-            width: 2.9in;
-        }
-    }
+  .trans {
+    margin-left: 4in;
+    width: 2in;
+    page-break-before: avoid;
+  }
+
+  .center {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+    white-space: pre-wrap;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .note { display: none; }
+  .section { display: none; }
+  .synopsis { display: none; }
 }

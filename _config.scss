@@ -1,4 +1,4 @@
-$page-size: 8.5in 11in;
+$page-size: letter;
 $font-size: 12pt;
 $font-stack: "Courier Primer", "Courier", "Courier Final Draft", "Courier New";
 $line-height: 1;
@@ -7,6 +7,7 @@ $text-body-width: 6in;
 $title-upcase: true;
 $title-underline: true;
 $title-bold: false;
+$title-contact-right: false;
 
 $scene-double-space: true;
 $scene-bold: false;

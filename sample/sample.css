@@ -1,0 +1,117 @@
+@page screenplay, screenplay-title {
+  size: letter;
+  margin-top: 1in;
+  margin-right: 1in;
+  margin-bottom: 0.75in;
+  margin-left: 1.5in; }
+@page screenplay {
+  @top-right-corner {
+    font-family: "Courier Primer", "Courier", "Courier Final Draft", "Courier New";
+    font-size: 12pt;
+    content: counter(page) ".";
+    vertical-align: bottom;
+    padding-bottom: 1em; } }
+@page screenplay:first {
+  @top-right-corner {
+    content: normal; } }
+.screenplay {
+  page: screenplay;
+  counter-reset: page;
+  font-family: "Courier Primer", "Courier", "Courier Final Draft", "Courier New";
+  font-size: 12pt;
+  line-height: 1;
+  width: 6in;
+  margin: 1em auto; }
+  .screenplay .title-page {
+    page: screenplay-title;
+    page-break-after: always;
+    width: 6in;
+    margin-top: 0in;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto; }
+    .screenplay .title-page .title {
+      text-align: center; }
+      @media print {
+        .screenplay .title-page .title {
+          margin-top: 3.5in;
+          margin-bottom: 4in; } }
+      .screenplay .title-page .title h1 {
+        text-transform: uppercase;
+        text-decoration: underline; }
+  .screenplay h1, .screenplay h2, .screenplay h3, .screenplay h4, .screenplay h5, .screenplay h6 {
+    font-weight: normal;
+    font-size: 12pt; }
+  .screenplay hr {
+    page-break-after: always; }
+    @media print {
+      .screenplay hr {
+        visibility: hidden; } }
+  .screenplay mark {
+    background-color: yellow; }
+    .screenplay mark:before {
+      content: '*';
+      width: 0.5in;
+      position: absolute;
+      right: 0in; }
+  .screenplay del:before {
+    content: '*';
+    width: 0.5in;
+    position: absolute;
+    right: 0in; }
+  .screenplay .scene-heading {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    page-break-after: avoid; }
+  .screenplay .action {
+    width: auto;
+    margin: 1em 0in;
+    white-space: pre-wrap;
+    orphans: 2;
+    widows: 2; }
+  .screenplay .dialog {
+    width: 4in;
+    margin-top: 1em;
+    margin-left: 1.5in;
+    margin-bottom: 1em; }
+    .screenplay .dialog .character {
+      margin-left: 1in; }
+    .screenplay .dialog .lines {
+      width: 3.5in;
+      orphans: 2;
+      widows: 2; }
+    .screenplay .dialog .paren {
+      display: block;
+      width: 2in;
+      margin-left: 0.6in;
+      text-indent: -0.6em;
+      page-break-inside: avoid;
+      page-break-after: avoid; }
+    .screenplay .dialog.dual {
+      width: 3in; }
+      .screenplay .dialog.dual .lines {
+        width: 2.9in; }
+      .screenplay .dialog.dual.left {
+        margin-left: 0in;
+        float: left; }
+      .screenplay .dialog.dual.right {
+        clear: none; }
+  .screenplay .trans {
+    margin-left: 4in;
+    width: 2in;
+    page-break-before: avoid; }
+  .screenplay .center {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+    white-space: pre-wrap; }
+  .screenplay .underline {
+    text-decoration: underline; }
+  .screenplay .note {
+    display: none; }
+  .screenplay .section {
+    display: none; }
+  .screenplay .synopsis {
+    display: none; }
+
+/*# sourceMappingURL=sample.css.map */
