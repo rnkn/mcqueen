@@ -5,6 +5,8 @@ McQueen
 
 McQueen is style for HTML screenplays.
 
+Preview the [Nicholl Fellowship sample script](https://cdn.rawgit.com/rnkn/mcqueen/master/sample/sample.html).
+
 Usage
 -----
 
