@@ -77,13 +77,19 @@
     margin-bottom: 1em;
     margin-left: 1.5in; }
     .screenplay .dialog .character {
+      margin-top: 0em;
+      margin-bottom: 0em;
       margin-left: 1in; }
     .screenplay .dialog .lines {
       width: 3.5in;
+      margin-top: 0em;
+      margin-bottom: 0em;
       orphans: 2;
       widows: 2; }
     .screenplay .dialog .paren {
       width: 2in;
+      margin-top: 0em;
+      margin-bottom: 0em;
       margin-left: 0.6in;
       text-indent: -0.6em;
       page-break-inside: avoid;

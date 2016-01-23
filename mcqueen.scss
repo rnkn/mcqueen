@@ -141,15 +141,21 @@ $highlight-change-color: yellow !default;
     margin-bottom: 1em;
     margin-left: 1.5in;
     .character {
+      margin-top: 0em;
+      margin-bottom: 0em;
       margin-left: 1in;
     }
     .lines {
       width: 3.5in;
+      margin-top: 0em;
+      margin-bottom: 0em;
       orphans: $dialog-orphans;
       widows: $dialog-widows;
     }
     .paren {
       width: 2in;
+      margin-top: 0em;
+      margin-bottom: 0em;
       margin-left: 0.6in;
       text-indent: -0.6em;
       page-break-inside: avoid;
