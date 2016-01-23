@@ -3,17 +3,22 @@
   margin-top: 1in;
   margin-right: 1in;
   margin-bottom: 0.75in;
-  margin-left: 1.5in; }
+  margin-left: 1.5in;
+}
 @page screenplay {
   @top-right-corner {
     font-family: "Courier Prime", "Courier", "Courier Final Draft", "Courier New";
     font-size: 12pt;
     content: counter(page) ".";
     vertical-align: bottom;
-    padding-bottom: 1em; } }
+    padding-bottom: 1em;
+  }
+}
 @page screenplay:first {
   @top-right-corner {
-    content: normal; } }
+    content: normal;
+  }
+}
 .screenplay {
   page: screenplay;
   counter-reset: page;
@@ -21,103 +26,133 @@
   font-size: 12pt;
   line-height: 1;
   width: 6in;
-  margin: 1em auto; }
-  .screenplay .title-page {
-    page: screenplay-title;
-    page-break-after: always;
-    width: 6in;
-    margin-top: 0in;
-    margin-right: auto;
-    margin-bottom: 1em;
-    margin-left: auto; }
-    .screenplay .title-page .title {
-      text-align: center; }
-      @media print {
-        .screenplay .title-page .title {
-          margin-top: 3.5in;
-          margin-bottom: 4in; } }
-      .screenplay .title-page .title h1 {
-        text-transform: uppercase;
-        text-decoration: underline; }
-  .screenplay h1, .screenplay h2, .screenplay h3, .screenplay h4, .screenplay h5, .screenplay h6 {
-    font-weight: inherit;
-    font-size: inherit; }
+  margin: 1em auto;
+}
+.screenplay .title-page {
+  page: screenplay-title;
+  page-break-after: always;
+  width: 6in;
+  margin-top: 0in;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+}
+.screenplay .title-page .title {
+  text-align: center;
+}
+@media print {
+  .screenplay .title-page .title {
+    margin-top: 3.5in;
+    margin-bottom: 4in;
+  }
+}
+.screenplay .title-page .title h1 {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.screenplay h1, .screenplay h2, .screenplay h3, .screenplay h4, .screenplay h5, .screenplay h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+.screenplay hr {
+  page-break-after: always;
+}
+@media print {
   .screenplay hr {
-    page-break-after: always; }
-    @media print {
-      .screenplay hr {
-        visibility: hidden; } }
-  .screenplay mark {
-    background-color: yellow; }
-    .screenplay mark:before {
-      content: '*';
-      width: 0.5in;
-      position: absolute;
-      right: 0in; }
-  .screenplay del:before {
-    content: '*';
-    width: 0.5in;
-    position: absolute;
-    right: 0in; }
-  .screenplay .scene {
-    margin-top: 2em;
-    width: auto; }
-  .screenplay .scene-heading {
-    margin-bottom: 1em;
-    page-break-after: avoid; }
-  .screenplay .action {
-    margin: 1em 0in;
-    white-space: pre-wrap;
-    orphans: 2;
-    widows: 2; }
-  .screenplay .dialog {
-    display: table;
-    width: 4in;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 1.5in; }
-    .screenplay .dialog .character {
-      margin-top: 0em;
-      margin-bottom: 0em;
-      margin-left: 1in; }
-    .screenplay .dialog .lines {
-      width: 3.5in;
-      margin-top: 0em;
-      margin-bottom: 0em;
-      orphans: 2;
-      widows: 2; }
-    .screenplay .dialog .paren {
-      width: 2in;
-      margin-top: 0em;
-      margin-bottom: 0em;
-      margin-left: 0.6in;
-      text-indent: -0.6em;
-      page-break-inside: avoid;
-      page-break-after: avoid; }
-    .screenplay .dialog.dual {
-      width: 3in; }
-      .screenplay .dialog.dual .lines {
-        width: 2.9in; }
-      .screenplay .dialog.dual.left {
-        margin-top: 0em;
-        margin-left: 0in;
-        float: left; }
-      .screenplay .dialog.dual.right {
-        clear: none; }
-  .screenplay .trans {
-    margin-left: 4in;
-    width: 2in;
-    page-break-before: avoid; }
-  .screenplay .center {
-    text-align: center;
-    margin-left: 0;
-    width: 100%;
-    white-space: pre-wrap; }
-  .screenplay .underline {
-    text-decoration: underline; }
-  .screenplay .note {
-    display: none; }
-  .screenplay .section-heading {
-    display: none; }
-  .screenplay .synopsis {
-    display: none; }
+    visibility: hidden;
+  }
+}
+.screenplay mark {
+  background-color: yellow;
+}
+.screenplay mark:before {
+  content: '*';
+  width: 0.5in;
+  position: absolute;
+  right: 0in;
+}
+.screenplay del:before {
+  content: '*';
+  width: 0.5in;
+  position: absolute;
+  right: 0in;
+}
+.screenplay .scene {
+  margin-top: 2em;
+  width: auto;
+}
+.screenplay .scene-heading {
+  margin-bottom: 1em;
+  page-break-after: avoid;
+}
+.screenplay .action {
+  margin: 1em 0in;
+  white-space: pre-wrap;
+  orphans: 2;
+  widows: 2;
+}
+.screenplay .dialog {
+  display: table;
+  width: 4in;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1.5in;
+}
+.screenplay .dialog .character {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 1in;
+}
+.screenplay .dialog .lines {
+  width: 3.5in;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  orphans: 2;
+  widows: 2;
+}
+.screenplay .dialog .paren {
+  width: 2in;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 0.6in;
+  text-indent: -0.6em;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+.screenplay .dialog.dual {
+  width: 3in;
+}
+.screenplay .dialog.dual .lines {
+  width: 2.9in;
+}
+.screenplay .dialog.dual.left {
+  margin-top: 0em;
+  margin-left: 0in;
+  float: left;
+}
+.screenplay .dialog.dual.right {
+  clear: none;
+}
+.screenplay .trans {
+  margin-left: 4in;
+  width: 2in;
+  page-break-before: avoid;
+}
+.screenplay .center {
+  text-align: center;
+  margin-left: 0;
+  width: 100%;
+  white-space: pre-wrap;
+}
+.screenplay .underline {
+  text-decoration: underline;
+}
+.screenplay .note {
+  display: none;
+}
+.screenplay .section-heading {
+  display: none;
+}
+.screenplay .synopsis {
+  display: none;
+}
