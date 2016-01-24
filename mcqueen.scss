@@ -57,6 +57,7 @@ $highlight-change-color: yellow !default;
   line-height: $line-height;
   width: $text-body-width;
   margin: 1em auto;
+  -webkit-text-size-adjust: none;
 
   .title-page {
     page: screenplay-title;

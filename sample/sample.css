@@ -27,6 +27,7 @@
   line-height: 1;
   width: 6in;
   margin: 1em auto;
+  -webkit-text-size-adjust: none;
 }
 .screenplay .title-page {
   page: screenplay-title;
