@@ -139,6 +139,14 @@
   width: 2in;
   page-break-before: avoid;
 }
+.screenplay .note {
+  display: block;
+  font-size: 11pt;
+  font-family: "Comic Sans MS";
+  line-height: 1.5;
+  background-color: lightgoldenrodyellow;
+  padding: 1em;
+}
 .screenplay .center {
   text-align: center;
   margin-left: 0in;
@@ -147,9 +155,6 @@
 }
 .screenplay .underline {
   text-decoration: underline;
-}
-.screenplay .note {
-  display: none;
 }
 .screenplay .section-heading {
   display: none;

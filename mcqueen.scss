@@ -23,6 +23,11 @@ $dialog-more: "(MORE)" !default;
 $dialog-orphans: 2 !default;
 $dialog-widows: 2 !default;
 
+$show-notes: false !default;
+$note-font-size: 11pt !default;
+$note-font: "Comic Sans MS" !default;
+$note-line-height: 1.5 !default;
+$note-color: lightgoldenrodyellow !default;
 $highlight-change-color: yellow !default;
 
 @page screenplay, screenplay-title {
@@ -185,6 +190,16 @@ $highlight-change-color: yellow !default;
     page-break-before: avoid;
   }
 
+  .note {
+    @if $show-notes { display: block; }
+    @else { display: none; }
+    font-size: $note-font-size;
+    font-family: $note-font;
+    line-height: $note-line-height;
+    background-color: $note-color;
+    padding: 1em;
+  }
+
   .center {
     text-align: center;
     margin-left: 0in;
@@ -196,7 +211,6 @@ $highlight-change-color: yellow !default;
     text-decoration: underline;
   }
 
-  .note { display: none; }
   .section-heading { display: none; }
   .synopsis { display: none; }
 }
