@@ -29,7 +29,7 @@ Variables
 | $font-size              | 12pt                                              | size                  |
 | $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | array                 |
 | $line-height            | 1                                                 | integer               |
-| $text-body-width        | 6in                                               | length                |
+| $text-body-width        | 6in                                               | size                  |
 | $title-upcase           | true                                              | boolean               |
 | $title-underline        | true                                              | boolean               |
 | $title-bold             | false                                             | boolean               |
@@ -43,4 +43,9 @@ Variables
 | $action-widows          | 2                                                 | integer               |
 | $dialog-orphans         | 2                                                 | integer               |
 | $dialog-widows          | 2                                                 | integer               |
+| $show-notes             | false                                             | boolean               |
+| $note-font-size         | 11pt                                              | size                  |
+| $note-font              | "Comic Sans MS"                                   | array                 |
+| $note-line-height       | 1.5                                               | size                  |
+| $note-color             | lightgoldenrodyellow                              | color                 |
 | $highlight-change-color | yellow                                            | color                 |
