@@ -28,6 +28,10 @@ $note-font-size: 11pt !default;
 $note-font: "Comic Sans MS", "Helvetica", "Marker Felt" !default;
 $note-line-height: 1.5 !default;
 $note-color: lightgoldenrodyellow !default;
+
+$show-synopses: false !default;
+$synopses-color: grey !default;
+
 $highlight-change-color: yellow !default;
 
 @page screenplay, screenplay-title {
@@ -200,6 +204,14 @@ $highlight-change-color: yellow !default;
     padding: 1em;
   }
 
+  .synopsis {
+    @if $show-synopses { display: block; }
+    @else { display: none; }
+    margin-top: 0em;
+    color: $synopses-color;
+    font-style: italic;
+  }
+
   .center {
     text-align: center;
     margin-left: 0in;
@@ -212,5 +224,4 @@ $highlight-change-color: yellow !default;
   }
 
   .section-heading { display: none; }
-  .synopsis { display: none; }
 }

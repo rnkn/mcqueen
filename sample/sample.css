@@ -147,6 +147,12 @@
   background-color: lightgoldenrodyellow;
   padding: 1em;
 }
+.screenplay .synopsis {
+  display: block;
+  margin-top: 0em;
+  color: grey;
+  font-style: italic;
+}
 .screenplay .center {
   text-align: center;
   margin-left: 0in;
@@ -157,8 +163,5 @@
   text-decoration: underline;
 }
 .screenplay .section-heading {
-  display: none;
-}
-.screenplay .synopsis {
   display: none;
 }
