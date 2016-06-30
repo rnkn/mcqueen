@@ -6,10 +6,13 @@ $font-stack: "Courier Prime", "Courier", "Courier Final Draft", "Courier New" !d
 $line-height: 1 !default;
 $text-body-width: 6in !default;
 
+$show-title-page: true !default;
 $title-upcase: true !default;
 $title-underline: true !default;
 $title-bold: false !default;
 $title-contact-right: false !default;
+
+$hide-first-page-number: true !default;
 
 $scene-double-space: false !default;
 $scene-bold: false !default;
@@ -31,6 +34,8 @@ $note-color: lightgoldenrodyellow !default;
 
 $show-synopses: false !default;
 $synopses-color: grey !default;
+
+$show-section-headings: false !default;
 
 $highlight-change-color: yellow !default;
 
