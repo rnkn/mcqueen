@@ -25,15 +25,15 @@
   font-family: "Courier Prime", "Courier", "Courier Final Draft", "Courier New";
   font-size: 12pt;
   line-height: 1;
-  width: 6in;
+  max-width: 6in;
   margin: 1em auto;
   -webkit-text-size-adjust: none;
 }
 .screenplay .title-page {
+  display: block;
   page: screenplay-title;
   page-break-after: always;
-  width: 6in;
-  margin-top: 0in;
+  margin-top: 0;
   margin-right: auto;
   margin-bottom: 1em;
   margin-left: auto;
@@ -55,6 +55,10 @@
   font-weight: inherit;
   font-size: inherit;
 }
+.screenplay a {
+  color: inherit;
+  text-decoration: none;
+}
 .screenplay hr {
   page-break-after: always;
 }
@@ -70,73 +74,82 @@
   content: '*';
   width: 0.5in;
   position: absolute;
-  right: 0in;
+  right: 0;
 }
 .screenplay del:before {
   content: '*';
   width: 0.5in;
   position: absolute;
-  right: 0in;
+  right: 0;
 }
 .screenplay .scene {
   margin-top: 2em;
-  width: auto;
+  width: 100%;
 }
 .screenplay .scene-heading {
-  margin-bottom: 1em;
+  margin-bottom: 0;
+  clear: both;
   page-break-after: avoid;
 }
 .screenplay .action {
-  margin: 1em 0in;
+  margin: 1em 0;
+  clear: both;
   white-space: pre-wrap;
   orphans: 2;
   widows: 2;
 }
 .screenplay .dialog {
   display: table;
-  width: 4in;
+  width: 75%;
+  max-width: 4in;
   margin-top: 1em;
   margin-bottom: 1em;
-  margin-left: 1.5in;
+  margin-left: 17%;
+  clear: both;
 }
 .screenplay .dialog .character {
-  margin-top: 0em;
-  margin-bottom: 0em;
-  margin-left: 1in;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 25%;
 }
 .screenplay .dialog .lines {
-  width: 3.5in;
-  margin-top: 0em;
-  margin-bottom: 0em;
+  max-width: 3.5in;
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: pre-wrap;
   orphans: 2;
   widows: 2;
 }
 .screenplay .dialog .paren {
-  width: 2in;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  margin-left: 0.6in;
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10%;
   text-indent: -0.6em;
   page-break-inside: avoid;
   page-break-after: avoid;
 }
 .screenplay .dialog.dual {
-  width: 3in;
+  min-width: 16em;
+  max-width: 50%;
+  margin-top: 0;
+  margin-left: 0;
 }
 .screenplay .dialog.dual .lines {
-  width: 2.9in;
+  width: 95%;
 }
 .screenplay .dialog.dual.left {
-  margin-top: 0em;
-  margin-left: 0in;
   float: left;
+  clear: left;
 }
 .screenplay .dialog.dual.right {
-  clear: none;
+  float: right;
+  clear: right;
 }
 .screenplay .trans {
-  margin-left: 4in;
-  width: 2in;
+  max-width: 2in;
+  margin-left: 63%;
+  clear: both;
   page-break-before: avoid;
 }
 .screenplay .note {
@@ -149,13 +162,12 @@
 }
 .screenplay .synopsis {
   display: block;
-  margin-top: 0em;
+  margin-top: 0;
   color: grey;
   font-style: italic;
 }
 .screenplay .center {
   text-align: center;
-  margin-left: 0in;
   width: 100%;
   white-space: pre-wrap;
 }
@@ -163,5 +175,16 @@
   text-decoration: underline;
 }
 .screenplay .section-heading {
-  display: none;
+  display: block;
 }
+.screenplay .menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=sample.css.map */
