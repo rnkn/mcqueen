@@ -30,10 +30,12 @@ Variables
 | $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | array                 |
 | $line-height            | 1                                                 | integer               |
 | $text-body-width        | 6in                                               | size                  |
+| $show-title-page        | true                                              | boolean               |
 | $title-upcase           | true                                              | boolean               |
 | $title-underline        | true                                              | boolean               |
 | $title-bold             | false                                             | boolean               |
 | $title-contact-right    | false                                             | boolean               |
+| $hide-first-page-number | true                                              | boolean               |
 | $scene-double-space     | false                                             | boolean               |
 | $scene-bold             | false                                             | boolean               |
 | $scene-underline        | false                                             | boolean               |
@@ -48,4 +50,5 @@ Variables
 | $note-font              | "Comic Sans MS"                                   | array                 |
 | $note-line-height       | 1.5                                               | size                  |
 | $note-color             | lightgoldenrodyellow                              | color                 |
+| $show-section-headings  | false                                             | boolean               |
 | $highlight-change-color | yellow                                            | color                 |
