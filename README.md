@@ -25,7 +25,7 @@ Variables
 
 | Variable                | Default                                           | Type/Value            |
 |-------------------------|---------------------------------------------------|-----------------------|
-| $page-size              | letter                                            | letter, us-letter, a4 |
+| $page-size              | letter                                            | letter, a4            |
 | $font-size              | 12pt                                              | size                  |
 | $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | array                 |
 | $line-height            | 1                                                 | integer               |
