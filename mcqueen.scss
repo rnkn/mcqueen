@@ -59,7 +59,7 @@ $highlight-change-color: yellow !default;
 
 @page screenplay:first {
   @top-right-corner {
-    content: normal;
+    @if $hide-first-page-number { content: normal; }
   }
 }
 
@@ -69,15 +69,16 @@ $highlight-change-color: yellow !default;
   font-family: $font-stack;
   font-size: $font-size;
   line-height: $line-height;
-  width: $text-body-width;
+  max-width: $text-body-width;
   margin: 1em auto;
   -webkit-text-size-adjust: none;
 
   .title-page {
+    @if $show-title-page { display: block; }
+    @else { display: none; }
     page: screenplay-title;
     page-break-after: always;
-    width: $text-body-width;
-    margin-top: 0in;
+    margin-top: 0;
     margin-right: auto;
     margin-bottom: 1em;
     margin-left: auto;
@@ -103,6 +104,11 @@ $highlight-change-color: yellow !default;
     font-size: inherit;
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   hr {
     @media print {
       visibility: hidden;
@@ -116,7 +122,7 @@ $highlight-change-color: yellow !default;
       content: '*';
       width: 0.5in;
       position: absolute;
-      right: 0in;
+      right: 0;
     }
   }
 
@@ -125,25 +131,27 @@ $highlight-change-color: yellow !default;
       content: '*';
       width: 0.5in;
       position: absolute;
-      right: 0in;
+      right: 0;
     }
   }
 
   .scene {
     @if $scene-double-space { margin-top: 2em; }
     @else { margin-top: 1em; }
-    width: auto;
+    width: 100%;
   }
-  
+
   .scene-heading {
     @if $scene-bold { font-weight: bold; }
     @if $scene-underline { text-decoration: underline; }
-    margin-bottom: 1em;
+    margin-bottom: 0;
+    clear: both;
     page-break-after: avoid;
   }
 
   .action {
-    margin: 1em 0in;
+    margin: 1em 0;
+    clear: both;
     white-space: pre-wrap;
     orphans: $action-orphans;
     widows: $action-widows;
@@ -151,51 +159,58 @@ $highlight-change-color: yellow !default;
 
   .dialog {
     display: table;
-    width: 4in;
+    width: 75%;
+    max-width: 4in;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1.5in;
+    margin-left: 17%;
+    clear: both;
     .character {
-      margin-top: 0em;
-      margin-bottom: 0em;
-      margin-left: 1in;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 25%;
     }
     .lines {
-      width: 3.5in;
-      margin-top: 0em;
-      margin-bottom: 0em;
+      max-width: 3.5in;
+      margin-top: 0;
+      margin-bottom: 0;
+      white-space: pre-wrap;
       orphans: $dialog-orphans;
       widows: $dialog-widows;
     }
     .paren {
-      width: 2in;
-      margin-top: 0em;
-      margin-bottom: 0em;
-      margin-left: 0.6in;
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 10%;
       text-indent: -0.6em;
       page-break-inside: avoid;
       page-break-after: avoid;
     }
 
     &.dual {
-      width: 3in;
+      min-width: 16em;
+      max-width: 50%;
+      margin-top: 0;
+      margin-left: 0;
       .lines {
-        width: 2.9in;
+        width: 95%;
       }
       &.left {
-        margin-top: 0em;
-        margin-left: 0in;
         float: left;
+        clear: left;
       }
       &.right {
-        clear: none;
+        float: right;
+        clear: right;
       }
     }
   }
 
   .trans {
-    margin-left: 4in;
-    width: 2in;
+    max-width: 2in;
+    margin-left: 63%;
+    clear: both;
     page-break-before: avoid;
   }
 
@@ -212,14 +227,13 @@ $highlight-change-color: yellow !default;
   .synopsis {
     @if $show-synopses { display: block; }
     @else { display: none; }
-    margin-top: 0em;
+    margin-top: 0;
     color: $synopses-color;
     font-style: italic;
   }
 
   .center {
     text-align: center;
-    margin-left: 0in;
     width: 100%;
     white-space: pre-wrap;
   }
@@ -228,5 +242,18 @@ $highlight-change-color: yellow !default;
     text-decoration: underline;
   }
 
-  .section-heading { display: none; }
+  .section-heading {
+    @if $show-section-headings { display: block; }
+    @else { display: none; }
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
 }
