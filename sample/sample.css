@@ -130,7 +130,6 @@
   page-break-after: avoid;
 }
 .screenplay .dialog.dual {
-  min-width: 16em;
   max-width: 50%;
   margin-top: 0;
   margin-left: 0;
