@@ -3,7 +3,7 @@ McQueen
 
 *"I live for myself and I answer to nobody." – Steve McQueen*
 
-McQueen is style for HTML screenplays.
+McQueen is style for responsive HTML screenplays.
 
 Preview the [Nicholl Fellowship sample script](https://rawgit.com/rnkn/mcqueen/master/sample/sample.html).
 
