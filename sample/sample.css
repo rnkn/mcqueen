@@ -154,7 +154,7 @@
 .screenplay .note {
   display: block;
   font-size: 11pt;
-  font-family: "Comic Sans MS", "Helvetica", "Marker Felt";
+  font-family: "Comic Sans MS", "Marker Felt", "sans-serif";
   line-height: 1.5;
   background-color: lightgoldenrodyellow;
   padding: 1em;
