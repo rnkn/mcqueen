@@ -19,6 +19,20 @@
     content: normal;
   }
 }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 .screenplay {
   page: screenplay;
   counter-reset: page;
@@ -33,10 +47,7 @@
   display: block;
   page: screenplay-title;
   page-break-after: always;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 1em;
-  margin-left: auto;
+  margin: 0 auto 1em;
 }
 .screenplay .title-page .title {
   text-align: center;
@@ -50,14 +61,6 @@
 .screenplay .title-page .title h1 {
   text-transform: uppercase;
   text-decoration: underline;
-}
-.screenplay h1, .screenplay h2, .screenplay h3, .screenplay h4, .screenplay h5, .screenplay h6 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-.screenplay a {
-  color: inherit;
-  text-decoration: none;
 }
 .screenplay hr {
   page-break-after: always;
@@ -82,6 +85,18 @@
   position: absolute;
   right: 0;
 }
+.screenplay .section {
+  width: 100%;
+  margin: 0;
+  clear: both;
+}
+.screenplay .section-heading {
+  display: block;
+  text-align: center;
+}
+.screenplay .section-heading:hover {
+  background-color: #c8f0ff;
+}
 .screenplay .scene {
   margin-top: 2em;
   width: 100%;
@@ -91,6 +106,9 @@
   clear: both;
   page-break-after: avoid;
 }
+.screenplay .scene-heading:hover {
+  background-color: #c8f0ff;
+}
 .screenplay .action {
   margin: 1em 0;
   clear: both;
@@ -99,7 +117,6 @@
   widows: 2;
 }
 .screenplay .dialog {
-  display: table;
   width: 75%;
   max-width: 4in;
   margin-top: 1em;
@@ -129,21 +146,20 @@
   page-break-inside: avoid;
   page-break-after: avoid;
 }
-.screenplay .dialog.dual {
+.screenplay .dual-dialog {
+  width: 100%;
+  margin: 1em 0;
+}
+.screenplay .dual-dialog .dialog {
   max-width: 50%;
   margin-top: 0;
   margin-left: 0;
-}
-.screenplay .dialog.dual .lines {
-  width: 95%;
-}
-.screenplay .dialog.dual.left {
+  margin-right: 0;
   float: left;
-  clear: left;
+  clear: none;
 }
-.screenplay .dialog.dual.right {
-  float: right;
-  clear: right;
+.screenplay .dual-dialog .dialog .lines {
+  width: 95%;
 }
 .screenplay .trans {
   max-width: 2in;
@@ -170,20 +186,3 @@
   width: 100%;
   white-space: pre-wrap;
 }
-.screenplay .underline {
-  text-decoration: underline;
-}
-.screenplay .section-heading {
-  display: block;
-}
-.screenplay .menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-
-/*# sourceMappingURL=sample.css.map */

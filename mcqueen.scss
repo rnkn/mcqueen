@@ -5,6 +5,7 @@ $font-size: 12pt !default;
 $font-stack: "Courier Prime", "Courier", "Courier Final Draft", "Courier New" !default;
 $line-height: 1 !default;
 $text-body-width: 6in !default;
+$link-hover-color: rgb(200,240,255) !default;
 
 $show-title-page: true !default;
 $title-upcase: true !default;
@@ -63,6 +64,20 @@ $highlight-change-color: yellow !default;
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 .screenplay {
   page: screenplay;
   counter-reset: page;
@@ -78,10 +93,7 @@ $highlight-change-color: yellow !default;
     @else { display: none; }
     page: screenplay-title;
     page-break-after: always;
-    margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 1em;
-    margin-left: auto;
+    margin: 0 auto 1em;
     .title {
       @media print {
         margin-top: 3.5in;
@@ -97,16 +109,6 @@ $highlight-change-color: yellow !default;
     .contact {
       @if $title-contact-right { text-align: right; }
     }
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: inherit;
-    font-size: inherit;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
   }
 
   hr {
@@ -135,6 +137,19 @@ $highlight-change-color: yellow !default;
     }
   }
 
+  .section {
+    width: 100%;
+    margin: 0;
+    clear: both;
+  }
+
+  .section-heading {
+    @if $show-section-headings { display: block; }
+    @else { display: none; }
+    text-align: center;
+    &:hover { background-color: $link-hover-color; }
+  }
+
   .scene {
     @if $scene-double-space { margin-top: 2em; }
     @else { margin-top: 1em; }
@@ -147,6 +162,7 @@ $highlight-change-color: yellow !default;
     margin-bottom: 0;
     clear: both;
     page-break-after: avoid;
+    &:hover { background-color: $link-hover-color; }
   }
 
   .action {
@@ -158,7 +174,6 @@ $highlight-change-color: yellow !default;
   }
 
   .dialog {
-    display: table;
     width: 75%;
     max-width: 4in;
     margin-top: 1em;
@@ -187,21 +202,20 @@ $highlight-change-color: yellow !default;
       page-break-inside: avoid;
       page-break-after: avoid;
     }
+  }
 
-    &.dual {
+  .dual-dialog {
+    width: 100%;
+    margin: 1em 0;
+    .dialog {
       max-width: 50%;
       margin-top: 0;
       margin-left: 0;
+      margin-right: 0;
+      float: left;
+      clear: none;
       .lines {
         width: 95%;
-      }
-      &.left {
-        float: left;
-        clear: left;
-      }
-      &.right {
-        float: right;
-        clear: right;
       }
     }
   }
@@ -237,22 +251,8 @@ $highlight-change-color: yellow !default;
     white-space: pre-wrap;
   }
 
-  .underline {
-    text-decoration: underline;
-  }
-
-  .section-heading {
-    @if $show-section-headings { display: block; }
-    @else { display: none; }
-  }
-
-  .menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    color: white;
-    background-color: rgba(0,0,0,0.25);
-    cursor: pointer;
-  }
 }
+
+// Local Variables:
+// css-indent-offset: 2
+// End:
