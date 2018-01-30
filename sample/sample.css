@@ -119,7 +119,6 @@ a {
 .screenplay .dialog {
   width: 75%;
   max-width: 4in;
-  margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 17%;
   clear: both;
@@ -147,8 +146,8 @@ a {
   page-break-after: avoid;
 }
 .screenplay .dual-dialog {
+  display: inline-block;
   width: 100%;
-  margin: 1em 0;
 }
 .screenplay .dual-dialog .dialog {
   max-width: 50%;

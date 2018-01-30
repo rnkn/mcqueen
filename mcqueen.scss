@@ -176,7 +176,6 @@ a {
   .dialog {
     width: 75%;
     max-width: 4in;
-    margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 17%;
     clear: both;
@@ -205,8 +204,8 @@ a {
   }
 
   .dual-dialog {
+    display: inline-block;
     width: 100%;
-    margin: 1em 0;
     .dialog {
       max-width: 50%;
       margin-top: 0;
