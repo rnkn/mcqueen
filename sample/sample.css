@@ -95,7 +95,7 @@ a {
   text-align: center;
 }
 .screenplay .section-heading:hover {
-  background-color: #c8f0ff;
+  background-color: #ebfaff;
 }
 .screenplay .scene {
   margin-top: 2em;
@@ -107,7 +107,7 @@ a {
   page-break-after: avoid;
 }
 .screenplay .scene-heading:hover {
-  background-color: #c8f0ff;
+  background-color: #ebfaff;
 }
 .screenplay .action {
   margin: 1em 0;
