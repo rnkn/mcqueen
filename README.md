@@ -5,9 +5,8 @@ McQueen
 
 McQueen is style for responsive HTML screenplays.
 
-Preview the [Nicholl Fellowship sample script](https://rawgit.com/rnkn/mcqueen/master/sample/sample.html).
-
-HTML documents can also include [snippets of screenplay content](https://rawgit.com/rnkn/mcqueen/master/sample/snippet.html).
+Preview the [Nicholl Fellowship sample script][1]. HTML documents can
+also include [snippets of screenplay content][2].
 
 Usage
 -----
@@ -52,3 +51,7 @@ Variables
 | $note-color             | lightgoldenrodyellow                              | color                 |
 | $show-section-headings  | false                                             | boolean               |
 | $highlight-change-color | yellow                                            | color                 |
+
+
+[1]: https://rawgit.com/rnkn/mcqueen/master/sample/sample.html
+[2]: https://rawgit.com/rnkn/mcqueen/master/sample/snippet.html
