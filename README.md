@@ -22,36 +22,38 @@ which allows for snippets within other content flow.
 Variables
 ---------
 
-| Variable                | Default                                           | Type/Value            |
-|-------------------------|---------------------------------------------------|-----------------------|
-| $page-size              | letter                                            | letter, a4            |
-| $font-size              | 12pt                                              | size                  |
-| $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | array                 |
-| $line-height            | 1                                                 | integer               |
-| $text-body-width        | 6in                                               | size                  |
-| $show-title-page        | true                                              | boolean               |
-| $title-upcase           | true                                              | boolean               |
-| $title-underline        | true                                              | boolean               |
-| $title-bold             | false                                             | boolean               |
-| $title-contact-right    | false                                             | boolean               |
-| $hide-first-page-number | true                                              | boolean               |
-| $scene-double-space     | false                                             | boolean               |
-| $scene-bold             | false                                             | boolean               |
-| $scene-underline        | false                                             | boolean               |
-| $dialog-contd           | "(CONT'D)"                                        | string                |
-| $dialog-more            | "(MORE)"                                          | string                |
-| $action-orphans         | 2                                                 | integer               |
-| $action-widows          | 2                                                 | integer               |
-| $dialog-orphans         | 2                                                 | integer               |
-| $dialog-widows          | 2                                                 | integer               |
-| $show-notes             | false                                             | boolean               |
-| $note-font-size         | 11pt                                              | size                  |
-| $note-font              | "Comic Sans MS"                                   | array                 |
-| $note-line-height       | 1.5                                               | size                  |
-| $note-color             | lightgoldenrodyellow                              | color                 |
-| $show-section-headings  | false                                             | boolean               |
-| $highlight-change-color | yellow                                            | color                 |
+| Variable                | Default                                           | Type/Value |
+|-------------------------|---------------------------------------------------|------------|
+| $page-size              | letter                                            | letter, a4 |
+| $font-size              | 12pt                                              | size       |
+| $font-stack             | "Courier Prime", "Courier", "Courier Final Draft" | array      |
+| $line-height            | 1                                                 | integer    |
+| $text-body-width        | 6in                                               | size       |
+| $show-title-page        | true                                              | boolean    |
+| $title-upcase           | true                                              | boolean    |
+| $title-underline        | true                                              | boolean    |
+| $title-bold             | false                                             | boolean    |
+| $title-contact-right    | false                                             | boolean    |
+| $hide-first-page-number | true                                              | boolean    |
+| $scene-double-space     | false                                             | boolean    |
+| $scene-bold             | false                                             | boolean    |
+| $scene-underline        | false                                             | boolean    |
+| $dialog-contd           | "(CONT'D)"                                        | string     |
+| $dialog-more            | "(MORE)"                                          | string     |
+| $action-orphans         | 2                                                 | integer    |
+| $action-widows          | 2                                                 | integer    |
+| $dialog-orphans         | 2                                                 | integer    |
+| $dialog-widows          | 2                                                 | integer    |
+| $show-notes             | false                                             | boolean    |
+| $note-font-size         | 11pt                                              | size       |
+| $note-font              | "Comic Sans MS"                                   | array      |
+| $note-line-height       | 1.5                                               | size       |
+| $note-color             | lightgoldenrodyellow                              | color      |
+| $show-section-headings  | false                                             | boolean    |
+| $highlight-change-color | yellow                                            | color      |
+| $link-hover-color       | white                                             | color      |
+| $link-hover-bg          | black                                             | color      |
 
 
-[1]: https://rawgit.com/rnkn/mcqueen/master/sample/sample.html
-[2]: https://rawgit.com/rnkn/mcqueen/master/sample/snippet.html
+[1]: https://bydasein.com/downloads/mcqueen/sample.html
+[2]: https://bydasein.com/downloads/mcqueen/snippet.html
