@@ -148,7 +148,10 @@ a {
 		@if $show-section-headings { display: block; }
 		@else { display: none; }
 		text-align: center;
-		&:hover { background-color: $link-hover-color; }
+		&:hover {
+			color: $link-hover-color;
+			background-color: $link-hover-bg;
+		}
 	}
 
 	.scene {
@@ -163,7 +166,10 @@ a {
 		margin-bottom: 0;
 		clear: both;
 		page-break-after: avoid;
-		&:hover { background-color: $link-hover-color; }
+		&:hover {
+			color: $link-hover-color;
+			background-color: $link-hover-bg;
+		}
 	}
 
 	.action {
