@@ -55,5 +55,5 @@ Variables
 | $link-hover-bg          | black                                             | color      |
 
 
-[1]: https://bydasein.com/dl/mcqueen/sample.html
-[2]: https://bydasein.com/dl/mcqueen/snippet.html
+[1]: https://git.bydasein.com/mcqueen/plain/sample/sample.html
+[2]: https://git.bydasein.com/mcqueen/plain/sample/snippet.html
